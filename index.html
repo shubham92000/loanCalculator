@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+    <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <style>
+        #results , #loading{
+            display: none;
+        }
+    </style>
+    <title>Hello, world!</title>
+    </head>
+    <body class="bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div class="card card-body text-center mt-5">
+                        <h1 class="heading display-5 pb-3">Loan Calculator</h1>
+                        <form id="loan-form">
+                            <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">$</span>
+                                    <input type="number" class="form-control" id="amount" placeholder="Loan Amount">
+                                    <button class="btn btn-dark" id="clear-amount" type="submit">clear</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">%</span>
+                                    <input type="number" class="form-control" id="interest" placeholder="Interest">
+                                    <button class="btn btn-dark" id="clear-interest" type="submit">clear</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <input type="number" class="form-control" id="years" placeholder="Years To Repay">
+                                    <button class="btn btn-dark" id="clear-years" type="submit">clear</button>
+                                </div>
+                            </div>
+                            <div class="form-group" style="margin-top: 20px;">
+                                <div class="d-grid gap-2 mx-auto">
+                                    <button class="btn btn-dark" id="Calculate" type="submit">Calculate</button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- LOADER -->
+                        <div id="loading">
+                            <img src="img/loading.gif" alt="">
+                        </div>
+                        <!-- RESULTS -->
+                        <div id="results" class="pt-4">
+                            <h5>Results</h5>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-text" id="basic-addon1">Monthly Payment</span>
+                                    <input type="number" class="form-control" id="monthly-payment" disabled>
+                                </div>
+                            </div>
+
+                            <div class="form-group pt-4">
+                                <div class="input-group">
+                                    <span class="input-group-text" id="basic-addon1">Total Payment</span>
+                                    <input type="number" class="form-control" id="total-payment" disabled>
+                                </div>
+                            </div>
+
+                            <div class="form-group pt-4">
+                                <div class="input-group">
+                                    <span class="input-group-text" id="basic-addon1">Total Interest</span>
+                                    <input type="number" class="form-control" id="total-interest" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    </body>
+</html>
